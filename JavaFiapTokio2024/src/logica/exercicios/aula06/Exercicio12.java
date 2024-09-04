@@ -16,12 +16,37 @@ public class Exercicio12 {
 		ladoB = scanner.nextDouble();
 		ladoC = scanner.nextDouble();
 		
+		/*
 		List<Double> lados = Arrays.asList(ladoA, ladoB, ladoC);
 		Collections.sort(lados);
 		ladoA = lados.get(2);
 		ladoB = lados.get(1);
 		ladoC = lados.get(0);
+		*/
 		
+		// ordenar lados
+		double temp;
+		if (ladoA < ladoB) {
+			temp = ladoA;
+			ladoA = ladoB;
+			ladoB = temp;
+		}
+		if (ladoA < ladoC) {
+			temp = ladoA;
+			ladoA = ladoC;
+			ladoC = temp;
+		}
+		if (ladoB < ladoC) {
+			temp = ladoB;
+			ladoB = ladoC;
+			ladoC = temp;
+		}
+		
+		System.out.println(ladoA);
+		System.out.println(ladoB);
+		System.out.println(ladoC);
+		
+		// verificar tipo de triângulo
 		if (ladoA >= ladoB + ladoC) {
 			System.out.println("Nao forma triangulo");
 		} else {
