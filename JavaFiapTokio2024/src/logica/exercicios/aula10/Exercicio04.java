@@ -3,22 +3,26 @@ package logica.exercicios.aula10;
 public class Exercicio04 {
 
 	public static void main(String[] args) {
-		System.out.println(calcularOperacao(5, 6, '*'));
+		calcularExibirOperacao(5, 6, '*');
 	}
 
-	static double calcularOperacao(int a, int b, char operacao) {
+	static void calcularExibirOperacao(int a, int b, char operacao) {
 		switch (operacao) {
 			case '+': 
-				return a + b;
+				System.out.println(a + b);
+				break;
 			case '-':
-				return a - b;
+				System.out.println(a - b);
+				break;
 			case '*':
-				return a * b;
+				System.out.println(a * b);
+				break;
 			case '/':
-				return (double) a / b;
+				System.out.printf("%.2f\n", (double) a / b);
+				break;
 			default:
 				System.out.println("Operacao invalida");
-				return -1;
+				return;
 		}
 	}
 }
